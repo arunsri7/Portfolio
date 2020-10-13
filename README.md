@@ -1,2 +1,2 @@
-Gatsby starter pack by [surudhb!](https://github.com/surudhb/gatsby-personal-site-template/)
+Link to the [Gatsby starter pack!](https://github.com/surudhb/gatsby-personal-site-template/)
 
