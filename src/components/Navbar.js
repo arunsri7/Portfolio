@@ -9,14 +9,7 @@ export default () => {
   const { dark, toggleDark, toString } = useContext(ThemeContext)
   return (
     <Navbar variant={toString()} fixed="top" collapseOnSelect expand="md">
-      <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
-        <FontAwesomeIcon
-          icon={["fab", `${dark ? "empire" : "rebel"}`]}
-          className={`brand-icon ${dark ? "empire" : "rebel"}`}
-          title="Home"
-        />
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse
         id="responsive-navbar-nav"
         className="justify-content-end"
@@ -32,7 +25,10 @@ export default () => {
             Projects
           </Nav.Link>
 
-          <Form className="ml-3 my-auto">
+        </Nav>
+      </Navbar.Collapse>
+      
+       <Form className="ml-3 my-auto">
             <Form.Check
               type="switch"
               id="custom-switch"
@@ -42,8 +38,14 @@ export default () => {
               onChange={toggleDark}
             />
           </Form>
-        </Nav>
-      </Navbar.Collapse>
+          
+      <Navbar.Brand className="pl-5 ml-5" as={Link} to="/">
+        <FontAwesomeIcon
+          icon={["fab", `${dark ? "empire" : "rebel"}`]}
+          className={`brand-icon ${dark ? "empire" : "rebel"}`}
+          title="Home"
+        />
+      </Navbar.Brand>
     </Navbar>
   )
 }

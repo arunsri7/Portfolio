@@ -1,8 +1,8 @@
-import React, { useContext } from "react"
+import React from "react"
 import { PageLayout, PageTitle } from "../components"
 import { Container, Image } from "react-bootstrap"
 import { Link, graphql } from "gatsby"
-import { ThemeContext, SEO } from "../utils"
+import { SEO } from "../utils"
 
 export default ({ data }) => {
   const MediaLink = ({ title, author, link }) => (
@@ -21,7 +21,6 @@ export default ({ data }) => {
     designations,
     unemployed,
   } = data.site.siteMetadata
-  const { toString } = useContext(ThemeContext)
 
   const showLinks = showsList.map(show => MediaLink(show))
 

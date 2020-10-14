@@ -15,7 +15,7 @@ module.exports = {
     occupation: `Software Developer`,
     keywords: [`Arun`, `Iyer`, `Personal`, `Blog`, `Resume`, `Projects`, `Work`],
     siteUrl:
-      process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
+      process.env.URL || process.env.DEPLOY_URL || `http://localhost:5000`,
     unemployed: true,
     designations: [
       `Software Developer`,
@@ -55,6 +55,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-preload-link-crossorigin`,
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // replace `UA-XXXXXXXXX-X` with your own Google Analytics Tracking ID
+        trackingId: `UA-180552109-1`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
