@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
 import { PageLayout, PageTitle } from "../components"
 import { Container, Image } from "react-bootstrap"
+import ThemeContext from "../utils/theme"
 import { Link, graphql } from "gatsby"
 import { SEO } from "../utils"
 import { FaCoffee } from 'react-icons/fa';
@@ -22,7 +23,7 @@ export default ({ data }) => {
     designations,
     unemployed,
   } = data.site.siteMetadata
-
+  const { dark } = useContext(ThemeContext)
   const showLinks = showsList.map(show => MediaLink(show))
 
   return (
@@ -34,7 +35,8 @@ export default ({ data }) => {
           rounded
           width="140"
           height="140"
-          src={`../../icons/arun.png`}
+          fluid
+          src={dark ? `../../icons/arun-dark.png` : `../../icons/arun.png`}
           alt={author}
         />
         <article className="w-75 m-auto pt-2 text-justify">
