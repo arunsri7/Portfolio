@@ -3,6 +3,7 @@ import { PageLayout, PageTitle } from "../components"
 import { Container, Image } from "react-bootstrap"
 import { Link, graphql } from "gatsby"
 import { SEO } from "../utils"
+import { FaCoffee } from 'react-icons/fa';
 
 export default ({ data }) => {
   const MediaLink = ({ title, author, link }) => (
@@ -64,7 +65,7 @@ export default ({ data }) => {
             or working on 
             android/web projects. I also have an 
             <Link to="https://www.instagram.com/pukaippatam/"> instagram account </Link> 
-             where I try to click some pictures on my phone.
+             where I try to click some pictures on my phone. 
           </p>
           <p className="i-5">
             Check out my <Link to="/projects">projects</Link> to see what I've
@@ -87,6 +88,9 @@ export default ({ data }) => {
                     rel="noopener noreferrer"
                   >
                     touch
+                  </a>
+                  <a>
+                  , or you could just <Link to="https://www.buymeacoffee.com/aruniyer">buy me a coffee.</Link> <FaCoffee/>
                   </a>
                   !
                 </small>
