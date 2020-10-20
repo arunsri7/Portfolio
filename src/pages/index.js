@@ -5,6 +5,7 @@ import { PageLayout } from "../components"
 import { SEO } from "../utils"
 import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {BrowserView, MobileView} from 'react-device-detect';
 
 export default ({ data }) => {
   const { unemployed, firstName, lastName, occupation } = data.site.siteMetadata
@@ -20,12 +21,20 @@ export default ({ data }) => {
           src={dark ? `../../icons/darth-vader.png` : `../../icons/r2-d2.png`}
           alt={dark ? "Darth Vader" : "R2-D2"}
         />
-        {unemployed && (
-          <p className="mt-2">
-            <b> Hey! I am looking for new opportunities :)</b>
-          </p>
-        )}
+     
         <Container className="py-0 my-0">
+          <MobileView>
+          <h1
+            style={{
+              fontSize: "3.5rem",
+              color: "black",
+            }}
+          >
+            <span className="first-name">{firstName}</span>&nbsp;
+            <span className="last-name">{lastName}</span>
+          </h1>
+          </MobileView>
+          <BrowserView>
           <h1
             style={{
               fontSize: "5rem",
@@ -35,6 +44,7 @@ export default ({ data }) => {
             <span className="first-name">{firstName}</span>&nbsp;
             <span className="last-name">{lastName}</span>
           </h1>
+          </BrowserView>
           <p>
             <i>
               {occupation} by day,&nbsp;
@@ -43,6 +53,67 @@ export default ({ data }) => {
           </p>
         </Container>
         <hr className="my-3 w-25" />
+        <MobileView>
+        <div className="d-sm-inline-flex icons-container">
+          <a
+            href="https://github.com/arunsri7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "github"]}
+              className="icons github"
+              title="Github"
+              style={{width : "8.5%"}}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/arun-iyer-412545154/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "linkedin"]}
+              className="icons linkedin"
+              title="LinkedIn"
+              style={{width : "8.5%"}}
+            />
+          </a>
+          <a
+            href="https://twitter.com/arunsri7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "twitter"]}
+              className="icons hr"
+              title="twitter"
+              style={{width : "8.5%"}}
+            />
+          </a>
+          <a
+            href="mailto:arun.i1997@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fas", "envelope"]}
+              className="icons mail"
+              title="e-mail"
+              style={{width : "8.5%"}}
+            />
+          </a>
+          <a href="../../resume.pdf"  target="_blank" download>
+            <FontAwesomeIcon
+              icon={["fas", "file-alt"]}
+              className="icons file"
+              title="Resume"
+              style={{width : "6%"}}
+            />
+          </a>
+        </div>
+        </MobileView>
+        <BrowserView>
         <div className="d-md-inline-flex icons-container">
           <a
             href="https://github.com/arunsri7"
@@ -53,6 +124,7 @@ export default ({ data }) => {
               icon={["fab", "github"]}
               className="icons github"
               title="Github"
+              
             />
           </a>
           <a
@@ -96,6 +168,18 @@ export default ({ data }) => {
             />
           </a>
         </div>
+        </BrowserView>
+      </Container>
+      <hr className="my-3 w-25" />
+      <Container>
+      <BrowserView>
+          <img src={dark ? `https://ghchart.rshah.org/FF0000/arunsri7` : 
+          `https://ghchart.rshah.org/409ba50/arunsri7`} alt="Arun's Github chart" />
+      </BrowserView>
+      <MobileView>
+          <img src={dark ? `https://ghchart.rshah.org/FF0000/arunsri7` : 
+          `https://ghchart.rshah.org/409ba50/arunsri7`}  alt="Arun's Github chart" style={{width : "100%"}}/>
+      </MobileView>
       </Container>
     </PageLayout>
   )

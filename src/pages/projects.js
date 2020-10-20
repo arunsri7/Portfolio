@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { PageLayout, PageTitle, ProjectLink } from "../components"
 import { SEO, Utils } from "../utils"
 import Container from "react-bootstrap/Container"
+import {BrowserView, MobileView} from 'react-device-detect';
 
 export default ({ data }) => {
   const allProjects = data.allMarkdownRemark.edges || []
@@ -14,6 +15,9 @@ export default ({ data }) => {
     <PageLayout>
       <SEO title="Projects" />
       <PageTitle title="Projects" />
+      <br/>
+      <br/>
+      <img src="https://ghchart.rshah.org/arunsri7" alt="Arun's Github chart" />
       <Container className="text-left">
         <section>
           {allProjects.map(({ node }) => (
