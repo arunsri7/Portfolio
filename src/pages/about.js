@@ -5,6 +5,7 @@ import ThemeContext from "../utils/theme"
 import { Link, graphql } from "gatsby"
 import { SEO } from "../utils"
 import { FaCoffee } from 'react-icons/fa';
+import {BrowserView, MobileView} from 'react-device-detect';
 
 export default ({ data }) => {
   const MediaLink = ({ title, author, link }) => (
@@ -106,6 +107,7 @@ export default ({ data }) => {
           <ul style={{ fontSize: "0.9rem", listStyle: "none" }}>{showLinks}</ul>
         </article>
       </Container>
+      
     </PageLayout>
   )
 }
