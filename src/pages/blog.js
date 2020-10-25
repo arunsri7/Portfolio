@@ -20,13 +20,14 @@ export default ({ data }) => {
 
     const filteredData = allPosts.filter(post => {
       // query will run on the following fields
-      const { description, title, tags, author } = post.node.frontmatter
+      const { description, title, tags, author, link } = post.node.frontmatter
       // standardize query
       const stdQuery = query.toLowerCase()
       return (
         post.node.excerpt.toLowerCase().includes(stdQuery) ||
         (description && description.toLowerCase().includes(stdQuery)) ||
         title.toLowerCase().includes(stdQuery) ||
+        link.toLowerCase().includes(stdQuery) ||
         author.toLowerCase().includes(stdQuery) ||
         (tags && tags.join("").toLowerCase().includes(stdQuery))
       )
@@ -65,6 +66,7 @@ export default ({ data }) => {
               to={node.fields.slug}
               featuredImage={featuredImageMap[node.fields.slug]}
               title={node.frontmatter.title}
+              link = {node.frontmatter.link}
               subtitle={node.frontmatter.date}
               excerpt={node.excerpt}
             />
@@ -90,6 +92,7 @@ export const query = graphql`
             description
             tags
             author
+            link
             date(formatString: "DD MMMM, YYYY")
           }
           fields {
