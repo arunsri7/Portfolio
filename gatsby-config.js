@@ -60,7 +60,6 @@ module.exports = {
         trackingId:  process.env.GATSBY_TRACKING_ID,
         // Puts tracking script in the head instead of the body
         head: true,
-        // enable ip anonymization
         anonymize: true,
       },
     },
