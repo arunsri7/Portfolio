@@ -160,7 +160,7 @@ export default ({ data }) => {
               title="e-mail"
             />
           </a>
-          <a href="../../resume.pdf" target="_blank" download>
+          <a href="https://www.notion.so/Arun-Iyer-Resume-bb035d921b414df7940dac06ccd98ef3" target="_blank" download>
             <FontAwesomeIcon
               icon={["fas", "file-alt"]}
               className="icons file"
