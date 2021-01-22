@@ -1,6 +1,6 @@
 ---
 title: "type-test"
-tags: ["Project", "golang"]
+tags: ["Project", "react"]
 date: "2020-10-13"
 ---
 Contributed to this open-source web app (in react) to practice typing fast [WIP]
