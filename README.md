@@ -6,6 +6,6 @@ Link to the [Website!](http://arun-iyer.com/?src=github)
 
 [![Website](https://img.shields.io/website?label=arun-iyer.com&style=for-the-badge&url=http%3A%2F%2Farun-iyer.com)](http://arun-iyer.com)
 
-<p align="center">
+<p>
 	<img src="./src/lighthouse.svg" width="800px">
 </p>
