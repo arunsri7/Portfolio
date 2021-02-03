@@ -82,7 +82,7 @@ export default ({ data }) => {
               <hr />
               <p className="unemployed">
                 <small>
-                  I am <b>currently looking for new opportunities</b>! If you
+                  If you
                   like what you see, let's get
                   in&nbsp;
                   <a
