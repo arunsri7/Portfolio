@@ -171,16 +171,6 @@ export default ({ data }) => {
         </BrowserView>
       </Container>
       <hr className="my-3 w-25" />
-      <Container>
-      <BrowserView>
-          <img src={dark ? `https://ghchart.rshah.org/FF0000/arunsri7` : 
-          `https://ghchart.rshah.org/409ba50/arunsri7`} alt="Arun's Github chart" />
-      </BrowserView>
-      <MobileView>
-          <img src={dark ? `https://ghchart.rshah.org/FF0000/arunsri7` : 
-          `https://ghchart.rshah.org/409ba50/arunsri7`}  alt="Arun's Github chart" style={{width : "100%"}}/>
-      </MobileView>
-      </Container>
     </PageLayout>
   )
 }
