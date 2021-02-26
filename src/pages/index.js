@@ -12,7 +12,9 @@ export default ({ data }) => {
   const { dark } = useContext(ThemeContext)
   return (
     <PageLayout>
-      <SEO title="Home" />
+      <SEO title="Home" 
+      description={post.frontmatter.description || post.excerpt}
+      image={image}/>
       <Container className="text-center pt-5 mt-5" fluid>
         <Image
           width="150"
