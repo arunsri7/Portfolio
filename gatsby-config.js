@@ -11,7 +11,7 @@ module.exports = {
     author: `Arun Iyer`,
     firstName: `Arun`,
     lastName: `Iyer`,
-    image:`/assets/photo.jgeg`,
+    image:`/assets/photo.jpeg`,
     description: `Arun Iyer's personal site`,
     occupation: `Software Developer`,
     keywords: [`Arun`, `Iyer`, `Personal`, `Blog`, `Resume`, `Projects`, `Work`],
