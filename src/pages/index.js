@@ -6,15 +6,16 @@ import { SEO } from "../utils"
 import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {BrowserView, MobileView} from 'react-device-detect';
+import {image} from '../cofee.jpg'
 
 export default ({ data }) => {
   const { unemployed, firstName, lastName, occupation } = data.site.siteMetadata
   const { dark } = useContext(ThemeContext)
-  return (
+  return (  
     <PageLayout>
       <SEO title="Home" 
-      description={post.frontmatter.description || post.excerpt}
-      image={image}/>
+          image={image}
+      />
       <Container className="text-center pt-5 mt-5" fluid>
         <Image
           width="150"
