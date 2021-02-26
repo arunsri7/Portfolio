@@ -6,7 +6,7 @@ import { SEO } from "../utils"
 import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {BrowserView, MobileView} from 'react-device-detect';
-import {image} from '../cofee.jpg'
+import {image} from '../coffe.jpeg'
 
 export default ({ data }) => {
   const { unemployed, firstName, lastName, occupation } = data.site.siteMetadata
